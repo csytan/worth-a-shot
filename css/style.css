@@ -4443,7 +4443,6 @@ body.modal-open-noscroll {
     font-size: 25px;
     font-weight: bold;
     padding: 1em;
-    overflow-x: auto;
 }
 
 .investing_fund_name {

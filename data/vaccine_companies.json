@@ -1,0 +1,42 @@
+[{
+		"name": "Glaxo Smith Kline",
+		"ticker": "GSK",
+		"current_price": 41.37,
+		"market_cap_billion": 100,
+		"shares_total_billion": 4.87,
+		"percent_owned_banks": 3.3,
+		"percent_owned_funds": 1.3,
+		"year_revenue_billion": 25,
+
+		"pneumonia_million": 615,
+		"pneumonia_share_percent": 2.5,
+		"pneumonia_diff_price_drop_percent": 0.6,
+		"pneumonia_projection_2020_million": 1000,
+		"pneumonia_projection_2020_diff_price_drop_percent": 0.35,
+
+		"twitter": "@GSKUS",
+		"email": "",
+		"phone": "(877) 353 1154",
+		"templace": "@GSKUS It would cost 0.6% of your Synflorix annual sales to fund a $5 discount a vaccine for the million kids that die per year #WorthAShot"
+	}, {
+		"name": "Pfizer",
+		"ticker": "PFE",
+		"current_price": 34.11,
+		"market_cap_billion": 200,
+		"shares_total_billion": 6,
+		"percent_owned_banks": 72,
+		"percent_owned_funds": 12,
+		"year_revenue_billion": 50,
+
+		"pneumonia_million": 6300,
+		"pneumonia_share_percent": 12,
+		"pneumonia_diff_price_drop_percent": 0.06,
+		"pneumonia_projection_2020_million": 10000,
+		"pneumonia_projection_2020_diff_price_drop_percent": 0.006,
+
+		"twitter": "@pfizer",
+		"email": "leadIndependentDirector@pfizer.com",
+		"phone": "(212) 733-2323",
+		"template": "@pfizer It would cost 0.06% of your Prevnar annual sales to fund a $5 discount a vaccine for the million kids that die per year #WorthAShot"
+	}
+]

@@ -8,8 +8,9 @@
 		"GSK_total_shares_percent": 0.11,
 		"GSK_total_value_million": 110,
 		"GSK_fund_percent": 0.21,
-		"vaccine_total_percent": 3.87,
+		"vaccine_total_percent": 0.75,
 		"vaccine_total_value": 1390,
+		"vaccine_total_exposure": 2.87,
 		"mfund_ticker": "VWNFX"
 	}, {
 		"name": "Vanguard Total Stock Mkt Idx",
@@ -19,6 +20,7 @@
 		"PFE_fund_percent": 0.8,
 		"vaccine_total_percent": 2.16,
 		"vaccine_total_value": 4320,
+		"vaccine_total_exposure": 0.8,
 		"mfund_ticker": "VTSMX"
 	}, {
 		"name": "Vanguard 500 Index Inv",
@@ -28,6 +30,7 @@
 		"PFE_fund_percent": 0.98,
 		"vaccine_total_percent": 1.48,
 		"vaccine_total_value": 2960,
+		"vaccine_total_exposure": 0.98,
 		"mfund_ticker": "VFINX"
 	}, {
 		"name": "SPDR® S&P 500 ETF",
@@ -37,33 +40,37 @@
 		"PFE_fund_percent": 1.02,
 		"vaccine_total_percent": 1.23,
 		"vaccine_total_value": 2460,
+		"vaccine_total_exposure": 1.02,
 		"mfund_ticker": "SPY"
 	}, {
 		"name": "Vanguard Institutional Index I",
 		"PFE_shares": 66560471,
 		"PFE_total_shares_percent": 1.1,
-		"PFE_total_shares_percent": 2200,
+		"PFE_total_value_million": 2200,
 		"PFE_fund_percent": 0.98,
 		"vaccine_total_percent": 1.11,
 		"vaccine_total_value": 2200,
+		"vaccine_total_exposure": 0.98,
 		"mfund_ticker": "VINIX"
 	}, {
 		"name": "Health Care Select Sector SPDR® ETF",
 		"PFE_shares": 33958160,
 		"PFE_total_shares_percent": 0.58,
-		"PFE_total_shares_percent": 1160,
+		"PFE_total_value_million": 1160,
 		"PFE_fund_percent": 7.2,
 		"vaccine_total_percent": 0.58,
 		"vaccine_total_value": 1160,
+		"vaccine_total_exposure": 7.2,
 		"mfund_ticker": "XLV"
 	}, {
 		"name": "Fidelity Spartan® 500 Index Inv",
 		"PFE_shares": 34308478,
 		"PFE_total_shares_percent": 0.57,
-		"PFE_total_shares_percent": 1140,
+		"PFE_total_value_million": 1140,
 		"PFE_fund_percent": 0.97,
 		"vaccine_total_percent": 0.57,
 		"vaccine_total_value": 1140,
+		"vaccine_total_exposure": 0.97,
 		"mfund_ticker": "FUSEX"
 	}, {
 		"name": "T. Rowe Price International Gr & Inc",
@@ -73,6 +80,7 @@
 		"GSK_fund_percent": 1.82,
 		"vaccine_total_percent": 0.57,
 		"vaccine_total_value": 230,
+		"vaccine_total_exposure": 1.87,
 		"mfund_ticker": "TRIGX"
 	}, {
 		"name": "Fidelity® Series Growth & Income",
@@ -82,6 +90,7 @@
 		"GSK_fund_percent": 1.37,
 		"vaccine_total_percent": 0.13,
 		"vaccine_total_value": 130,
+		"vaccine_total_exposure": 1.37,
 		"mfund_ticker": "FGLGX"
 	}, {
 		"name": "Fidelity® Growth & Income",
@@ -91,6 +100,34 @@
 		"GSK_fund_percent": 1.37,
 		"vaccine_total_percent": 0.1,
 		"vaccine_total_value": 110,
+		"vaccine_total_exposure": 1.37,
 		"mfund_ticker": "FGRIX"
+	}, {
+		"name": "Vanguard Value Index Inv",
+		"PFE_shares": 29258577,
+		"PFE_total_shares_percent": 0.48,
+		"PFE_fund_percent": 1.78,
+		"vaccine_total_percent": 0.48,
+		"vaccine_total_value": 960,
+		"vaccine_total_exposure": 1.78,
+		"mfund_ticker": "VIVAX"
+	}, {
+		"name": "Buffalo Flexible Income",
+		"GSK_shares": 500000,
+		"GSK_total_shares_percent": 0.02,
+		"GSK_fund_percent": 2.35,
+		"vaccine_total_percent": 0.48,
+		"vaccine_total_value": 960,
+		"vaccine_total_exposure": 2.35,
+		"mfund_ticker": "BUFBX"
+	}, {
+		"name": "Market Vectors® Pharmaceutical ETF",
+		"GSK_shares": 442987,
+		"GSK_total_shares_percent": 0.02,
+		"GSK_fund_percent": 5.02,
+		"vaccine_total_percent": 0.02,
+		"vaccine_total_value": 20,
+		"vaccine_total_exposure": 5.02,
+		"mfund_ticker": "PPH"
 	}
 ]

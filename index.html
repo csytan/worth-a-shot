@@ -163,16 +163,16 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="page-icon-top"></div>
                         <h3 class="boldL">Contact Your Investment Company</h3>
-                        <img class="" src="img/bank-logos.png" />						
+                        <img class="" src="img/bank-logos.png" />
 						<div class="page-icon-clear"></div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="page-icon-top"></div>
                         <h3 class="boldL">Personal Finance Guide</h3>
-                        					
+
 						<div class="page-icon-clear"><a class="btn btn-theme-line btn-banner" href="https://www.afairshot.org" onmouseover="document.getElementById('purveyorbtn').src='img/shot-w.png'"  onmouseout="document.getElementById('purveyorbtn').src='img/shot-r.png'" >Download the Guide</a></div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -183,7 +183,7 @@
             </div>
 
             <div class="investing_question">
-                Are you involved?
+                 Do you know what's in your portfolio?
             </div>
 
             <input 
@@ -194,6 +194,21 @@
             <div class="investing_funds"></div>
         </section>
         <!-- End Service Section -->
+
+        <!--
+        <!-- FOOTER 
+        <footer class="footer pt-60">
+            <div class="container wow fadeInUp">
+                <!--Footer Info -->
+                <!--
+                <a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                -->
+                <!-- End Footer Info 
+            </div>
+
+            <hr />
+        </footer>
+        <!-- END FOOTER -->
         
 		
         <!-- Counter Section -->
@@ -493,6 +508,12 @@ function renderFund(fund) {
         '</div>' + 
         '<div class="investing_fund_name">' + 
             fund.name +
+        '</div>' +
+         '<div class="vaccine_total_exposure">' +
+            fund.vaccine_total_exposure + '% ' +
+        '</div>' +
+         '<div class="vaccine_total_percent">' +
+            fund.vaccine_total_percent + '%' +
         '</div>' +
         '<div class="investing_fund_total">' +
             fund.vaccine_total_value + 'M' + 

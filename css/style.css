@@ -4319,3 +4319,113 @@ body.modal-open-noscroll {
     width: 70%;
     margin: 0 auto;
 }
+
+
+
+
+
+
+
+
+
+
+/* Investing section */
+.investing {
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.investing_lead {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 70%;
+    margin: 1em auto;
+    line-height: 1.5;
+}
+
+.investing_question {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 70%;
+    margin: 0.25em auto 1em;
+    line-height: 1.5;
+}
+
+.investing_search {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 1em;
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.investing_search:focus {
+    border-color: #4285f4;
+}
+
+.investing_funds {
+
+}
+
+.investing_fund {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0,0,0,.25);
+    border-bottom: none;
+    background: white;
+    color: rgba(0,0,0,.8);
+    cursor: pointer;
+}
+
+.investing_fund:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.investing_fund:last-child {
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.investing_fund:hover {
+    background: rgba(0,0,0,.05);
+    border-color: #aaa;
+}
+.investing_fund:hover + .investing_fund {
+    border-top-color: #aaa;
+}
+
+.investing_fund_ticker {
+    width: 30%;
+    max-width: 100px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1em;
+    overflow-x: auto;
+}
+
+.investing_fund_name {
+    flex: 1;
+    font-size: 20px;
+    padding: 1em;
+    text-align: left;
+}
+
+.investing_fund_total {
+    text-align: right;
+    width: 20%;
+    max-width: 100px;
+    font-size: 20px;
+    padding: 1em;
+}
+
+

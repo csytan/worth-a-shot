@@ -4371,6 +4371,39 @@ body.modal-open-noscroll {
     border-color: #4285f4;
 }
 
+.investing_subtitle {
+    font-size: 18px;
+    font-weight: 200;
+    margin: 20px auto;
+    text-align: center;
+    color: rgba(0,0,0,.7);
+}
+
+.investing_sortby {
+    display: flex;
+    margin-bottom: 20px;
+}
+.investing_sort {
+    flex: 1;
+    background: rgba(0,0,0,.1);
+    color: rgba(0,0,0,.5);
+    padding: 1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background 150ms;
+}
+.investing_sort:hover {
+    background: rgba(0,0,0,.15);
+}
+.investing_sort--active {
+    color: white;
+    background: rgba(0,0,0,.7);
+}
+.investing_sort--active:hover {
+    background: rgba(0,0,0,.7);
+}
+
+
 .investing_funds {
 
 }
@@ -4406,7 +4439,7 @@ body.modal-open-noscroll {
 
 .investing_fund_ticker {
     width: 30%;
-    max-width: 100px;
+    max-width: 120px;
     font-size: 25px;
     font-weight: bold;
     padding: 1em;
@@ -4427,5 +4460,9 @@ body.modal-open-noscroll {
     font-size: 20px;
     padding: 1em;
 }
+
+
+
+
 
 

@@ -148,32 +148,21 @@
         <!-- End About Section-->
 		<hr/>
         <!-- Service Section -->
-        <section id="howitworks" class="ptb-80">
-            <div class="wow fadeInLeft container text-center">
-                <h2 class="boldL">Infographics</h2>
-                <div class="spacer-60"></div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="page-icon-top"><img style="max-width: 70%;"src="img/mood.png" /></div>
-                        <h3 class="boldL">Box1</h3>
-                        <p>Type something</p>
-						<div class="page-icon-clear"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="page-icon-top"><img style="max-width: 70%;" src="img/story.png" /></div>
-                        <h3 class="boldL">Box2</h3>
-                        <p>Lorem epson</p>						
-						<div class="page-icon-clear"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="page-icon-top"><img style="max-width: 70%;"src="img/meetup.png" /></div>
-                        <h3 class="boldL">Box3</h3>
-                        <p>Doughnuts cookies and cream</p>						
-						<div class="page-icon-clear"></div>
-                    </div>
-                    
-                </div>
+        <section class="investing">
+            <div class="investing_lead">
+                15% of Pfizer is owned by the world's 20 largest mutual funds.
             </div>
+
+            <div class="investing_question">
+                Are you involved?
+            </div>
+
+            <input 
+                placeholder="Find a mutual fund"
+                class="investing_search"
+                type="text">
+
+            <div class="investing_funds"></div>
         </section>
         <!-- End Service Section -->
 
@@ -417,7 +406,6 @@
     </div>
 
     <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
-
     <script src="js/plugin/jquery.easing.js" type="text/javascript"></script>
     <script src="js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -439,6 +427,66 @@
     <script src="js/theme.js" type="text/javascript"></script>
     <script src="js/navigation.js" type="text/javascript"></script>
 	<script src="js/textarea-autogrow.js" type="text/javascript"></script>
+
+
+<script>
+(function() {
+
+var FUNDS = [{"name":"Vanguard Windsor™ II Inv","PFE_shares":38588185,"PFE_total_shares_percent":0.64,"PFE_total_value_million":1280,"PFE_fund_percent":2.66,"GSK_shares":2591100,"GSK_total_shares_percent":0.11,"GSK_total_value_million":110,"GSK_fund_percent":0.21,"vaccine_total_percent":3.87,"vaccine_total_value":1390,"mfund_ticker":"VWNFX"},{"name":"Vanguard Total Stock Mkt Idx","PFE_shares":131252570,"PFE_total_shares_percent":2.16,"PFE_total_value_million":4320,"PFE_fund_percent":0.8,"vaccine_total_percent":2.16,"vaccine_total_value":4320,"mfund_ticker":"VTSMX"},{"name":"Vanguard 500 Index Inv","PFE_shares":89995493,"PFE_total_shares_percent":1.48,"PFE_total_value_million":2960,"PFE_fund_percent":0.98,"vaccine_total_percent":1.48,"vaccine_total_value":2960,"mfund_ticker":"VFINX"},{"name":"SPDR® S&P 500 ETF","PFE_shares":72289832,"PFE_total_shares_percent":1.23,"PFE_total_value_million":2460,"PFE_fund_percent":1.02,"vaccine_total_percent":1.23,"vaccine_total_value":2460,"mfund_ticker":"SPY"},{"name":"Vanguard Institutional Index I","PFE_shares":66560471,"PFE_total_shares_percent":2200,"PFE_fund_percent":0.98,"vaccine_total_percent":1.11,"vaccine_total_value":2200,"mfund_ticker":"VINIX"},{"name":"Health Care Select Sector SPDR® ETF","PFE_shares":33958160,"PFE_total_shares_percent":1160,"PFE_fund_percent":7.2,"vaccine_total_percent":0.58,"vaccine_total_value":1160,"mfund_ticker":"XLV"},{"name":"Fidelity Spartan® 500 Index Inv","PFE_shares":34308478,"PFE_total_shares_percent":1140,"PFE_fund_percent":0.97,"vaccine_total_percent":0.57,"vaccine_total_value":1140,"mfund_ticker":"FUSEX"},{"name":"T. Rowe Price International Gr & Inc","GSK_shares":5566772,"GSK_total_shares_percent":0.23,"GSK_total_value_million":230,"GSK_fund_percent":1.82,"vaccine_total_percent":0.57,"vaccine_total_value":230,"mfund_ticker":"TRIGX"},{"name":"Fidelity® Series Growth & Income","GSK_shares":3163300,"GSK_total_shares_percent":0.13,"GSK_total_value_million":130,"GSK_fund_percent":1.37,"vaccine_total_percent":0.13,"vaccine_total_value":130,"mfund_ticker":"FGLGX"},{"name":"Fidelity® Growth & Income","GSK_shares":2460222,"GSK_total_shares_percent":0.1,"GSK_total_value_million":110,"GSK_fund_percent":1.37,"vaccine_total_percent":0.1,"vaccine_total_value":110,"mfund_ticker":"FGRIX"}];
+
+
+$('.investing_search')
+    .on('keyup', function() {
+        var html = '';
+        var query = this.value.toLowerCase();
+        var funds = searchFunds(query);
+        var sortedFunds = sortFunds(funds);
+
+        // Generate html for funds
+        sortedFunds.forEach(function(fund) {
+            html += renderFund(fund);
+        });
+        
+        // Update DOM
+        $('.investing_funds').html(html);
+    })
+    .trigger('keyup');
+
+
+function searchFunds(query) {
+    // Filter funds that contain query in ticker or name
+    return FUNDS.filter(function(fund) {
+        var tickerText = fund.mfund_ticker.toLowerCase();
+        var nameText = fund.name.toLowerCase();
+        var inTicker = tickerText.indexOf(query) != -1;
+        var inName = nameText.indexOf(query) != -1;
+        return inTicker || inName;
+    });
+}
+
+function sortFunds(funds) {
+    // Sort funds by most invested
+    return funds.slice()
+        .sort(function(a, b) {
+            return b.percent_total_assets - a.percent_total_assets;
+        });
+}
+
+function renderFund(fund) {
+    return '<div class="investing_fund">' +
+        '<div class="investing_fund_ticker">' + 
+            fund.mfund_ticker + 
+        '</div>' + 
+        '<div class="investing_fund_name">' + 
+            fund.name +
+        '</div>' +
+        '<div class="investing_fund_total">' +
+            fund.vaccine_total_value + 'M' + 
+        '</div>' +  
+    '</div>';
+}
+})();
+</script>
 
 	
 </body>

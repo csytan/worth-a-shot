@@ -502,9 +502,10 @@ function sortFunds(funds) {
 }
 
 function renderFund(fund) {
+    var ticker = fund.mfund_ticker;
     return '<div class="investing_fund">' +
-        '<div class="investing_fund_ticker">' + 
-            fund.mfund_ticker + 
+        '<div class="investing_fund_ticker">' +
+             '<a href="https://finance.yahoo.com/quote/' + ticker + '">' + ticker + '</a>' +
         '</div>' + 
         '<div class="investing_fund_name">' + 
             fund.name +

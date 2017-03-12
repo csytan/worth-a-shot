@@ -3,7 +3,7 @@
 var FUNDS;
 var FILTER = '';
 
-$.getJSON('data/funds_compil.json')
+$.getJSON('/worth-a-shot/data/funds_compil.json')
     .done(function(data) {
         FUNDS = data;
         run();
